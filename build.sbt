@@ -4,12 +4,12 @@ organization := "com.gilt"
 
 version := "0.0.15"
 
-scalaVersion := "2.9.1"
+scalaVersion := "2.10.0"
 
 crossPaths := false
 
 libraryDependencies ++= Seq(
-  "org.specs2" %% "specs2" % "1.9" % "test",
+  "org.specs2" %% "specs2" % "1.14" % "test",
   "org.slf4j" % "slf4j-api" % "1.6.4",
   "org.slf4j" % "slf4j-simple" % "1.6.4"
 )

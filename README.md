@@ -1,6 +1,9 @@
 A Scala implementation of [Handlebars](http://handlebarsjs.com/), an extension to and superset of the [Mustache](http://mustache.github.com/) templating language.
 
-This project began as an attempt to learn Scala and to experiment with Scala's [Parser Combinators](http://www.scala-lang.org/api/current/index.html#scala.util.parsing.combinator.Parsers) in an attempt to get handlebars.js templates working in Scala.
+This project began as a humble attempt to learn Scala and to experiment with Scala's [Parser Combinators](http://www.scala-lang.org/api/current/index.html#scala.util.parsing.combinator.Parsers) in an attempt to get handlebars.js templates working in Scala. 
+It is now used in production at [Gilt.com](http://gilt.com) as the preferred mechanism to create reusable server-side templates.
+
+This is the _experimental_ branch where we are working with new Scala reflection features introduced in Scala 2.10. This may include Macros, which are scary.
 
 Given a template:
 
@@ -63,8 +66,6 @@ where `context` is the list of arguments sent to the helper and `parent` is the 
 ## Caveats
 
 Two things to note when using Handlebars.scala:
-
-**There is no else.** Handlebars.js handles _if/else_ type statements, but because of the nature of `else`, I did not include it here. I could not figure out a slick way to include it and stick to the functional style that Scala developers go gaga over. My Scala skills are not yet to the level where I can understand a clear path forward.
 
 **Implicit conversions will not work in a template**. Because Handlebars.scala makes heavy use of reflection. Bummer, I know. This leads me too...
 

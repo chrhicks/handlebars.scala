@@ -2,8 +2,10 @@ A Scala implementation of [Handlebars](http://handlebarsjs.com/), an extension t
 
 This project began as a humble attempt to learn Scala and to experiment with Scala's [Parser Combinators](http://www.scala-lang.org/api/current/index.html#scala.util.parsing.combinator.Parsers) in an attempt to get handlebars.js templates working in Scala. 
 It is now used in production at [Gilt.com](http://gilt.com) as the preferred mechanism to create reusable server-side templates.
+We affectionately refer to it as _Scandlebars_.
 
-This is the _experimental_ branch where we are working with new Scala reflection features introduced in Scala 2.10. This may include Macros, which are scary.
+This is the _experimental_ branch where we are working with new Scala reflection features introduced in Scala 2.10. 
+This may include Macros, which are scary.
 
 Given a template:
 

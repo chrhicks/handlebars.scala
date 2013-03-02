@@ -2,19 +2,20 @@ name := "Handlebars"
 
 organization := "com.gilt"
 
-version := "0.0.16"
+version := "0.1.0-SNAPSHOT"
 
 scalaVersion := "2.10.0"
 
-crossPaths := false
+crossPaths := true
 
 libraryDependencies ++= Seq(
-  "org.specs2" %% "specs2" % "1.14" % "test",
+  "org.scala-lang" % "scala-reflect" % "2.10.0",
   "org.slf4j" % "slf4j-api" % "1.6.4",
-  "org.slf4j" % "slf4j-simple" % "1.6.4"
+  "org.slf4j" % "slf4j-simple" % "1.6.4",
+  "org.scalatest" % "scalatest_2.10" % "1.9.1" % "test",
+  "org.specs2" %% "specs2" % "1.14" % "test",
+  "com.google.guava" % "guava" % "12.0" % "test"
 )
-
-libraryDependencies += "com.google.guava" % "guava" % "12.0"
 
 resolvers ++= Seq(
   "Sonatype.org Snapshots" at "http://oss.sonatype.org/content/repositories/snapshots",
@@ -32,9 +33,6 @@ publishTo <<= version { (v: String) =>
   else
     Some("releases"  at nexus + "/service/local/staging/deploy/maven2")
 }
-
-// For publishing / testing locally
-// publishTo := Some(Resolver.file("m2",  new File(Path.userHome.absolutePath+"/.m2/repository")))
 
 publishArtifact in Test := false
 

@@ -1,0 +1,50 @@
+Sale Listing for Perf Test
+
+{{#sales}}
+    Sale Name: {{name}}
+    Sale Id: {{saleId}}
+    Sale Url Key: {{urlKey}}
+    Sale Start Date: {{startDate}}
+    Sale End Date: {{endDate}}
+
+    Products:
+    {{#products}}
+        Product Name: {{name}}
+        Product Id: {{productId}}
+        Product Url Key: {{urlKey}}
+
+        Brand:
+        {{#brand}}
+            Brand Name: {{name}}
+            Brand Id: {{brandId}}
+            Bran Url Key: {{urlKey}}
+        {{/brand}}
+
+        Descriptions:
+        {{#descriptions}}
+            Description Label: {{label}}
+            Description Content: {{content}}
+
+        {{/descriptions}}
+
+        Skus:
+        {{#skus}}
+            Sku Id: {{skuId}}
+            Sku MSRP Price: {{msrpPrice}}
+            Sku Sale Price: {{salePrice}}
+            Sku Availability: {{availability}}
+
+            Sku Attributes:
+            {{#attributes}}
+                Attribute Id: {{attributeId}}
+                Attribute Label: {{label}}
+
+                Attribute Values:
+                {{#values}}
+                    Attribute Value Id: {{attributeValueId}}
+                    Attribute Value Name: {{label}}
+                {{/values}}
+            {{/attributes}}
+        {{/skus}}
+    {{/products}}
+{{/sales}}

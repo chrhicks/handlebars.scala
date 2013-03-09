@@ -12,9 +12,11 @@ libraryDependencies ++= Seq(
   "org.scala-lang" % "scala-reflect" % "2.10.0",
   "org.slf4j" % "slf4j-api" % "1.6.4",
   "org.slf4j" % "slf4j-simple" % "1.6.4",
+  "com.chrhicks" % "macros_2.10" % "0.0.2-SNAPSHOT",
   "org.scalatest" % "scalatest_2.10" % "1.9.1" % "test",
   "org.specs2" %% "specs2" % "1.14" % "test",
-  "com.google.guava" % "guava" % "12.0" % "test"
+  "com.google.guava" % "guava" % "12.0" % "test",
+  "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
 )
 
 resolvers ++= Seq(

@@ -9,7 +9,5 @@ import com.gilt.handlebars.Node
  * Date: 2/27/13
  */
 trait HandlebarsVisitor {
-  def apply[T](base: T, helpers: Map[String,Helper[T]] = Map.empty[String,Helper[T]])
-
   def visit(node: Node): String
 }
